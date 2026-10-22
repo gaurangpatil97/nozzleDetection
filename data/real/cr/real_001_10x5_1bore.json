@@ -1,0 +1,18 @@
+﻿{
+  "image_id": "real_001",
+  "file_path": "data/real/cr/real_001_10x5_1bore.jpg",
+  "source": "real",
+  "generation": 0,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 1,
+  "positions": [
+    {"row": 10, "col": 1, "state": "bore_defect"}
+  ],
+  "verified": false,
+  "split": "test",
+  "prompt": null,
+  "notes": "original CR tray"
+}

@@ -1,0 +1,18 @@
+﻿{
+  "image_id": "real_005",
+  "file_path": "data/real/dsla/real_005_closeup_1bore.jpg",
+  "source": "real",
+  "generation": 0,
+  "parent_id": null,
+  "component_type": "DSLA",
+  "grid_rows": null,
+  "grid_cols": null,
+  "total_defects": 1,
+  "positions": [
+    {"row": null, "col": null, "state": "bore_defect"}
+  ],
+  "verified": true,
+  "split": "reference",
+  "prompt": null,
+  "notes": "close-up, not training data, used as Gemini reference only"
+}

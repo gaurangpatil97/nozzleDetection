@@ -1,0 +1,39 @@
+# Large image files - don't push to git
+data/gen1/cr/*.jpg
+data/gen1/dsla/*.jpg
+data/gen2/cr/*.jpg
+data/gen2/dsla/*.jpg
+data/real/cr/*.jpg
+data/real/dsla/*.jpg
+
+# Reference images
+references/*.jpg
+
+# Cleaned images folder
+cleaned_images/
+
+# Watermark removal zips
+*.zip
+
+# Model weights
+models/*.pth
+models/*.pt
+models/*.onnx
+models/*.h5
+
+# Results
+results/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

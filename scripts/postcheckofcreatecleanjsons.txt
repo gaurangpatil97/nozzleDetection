@@ -1,0 +1,17 @@
+Go to data/gen1/cr/ in the nozzle_detection project.
+
+For every .json file in that folder:
+1. Check that a matching .jpg file exists with the same name
+2. Check that image_id in the JSON matches the filename prefix (e.g. g1_001 for g1_001_2x5_clean.json)
+3. Check that file_path in the JSON points to the correct file (data/gen1/cr/{filename}.jpg)
+4. Check that grid_rows and grid_cols match what's in the filename (e.g. 2x5 means grid_rows=2, grid_cols=5)
+5. Check that source is "synthetic" and generation is 1 for all files
+6. Check that component_type is "CR" for all files
+7. Check that total_defects is 0 and positions is an empty list for all files (these are all clean bases)
+8. Check that all required fields exist: image_id, file_path, source, generation, parent_id, component_type, grid_rows, grid_cols, total_defects, positions, verified, split, prompt, notes
+
+Print a summary:
+- List of files that PASSED all checks
+- List of files that FAILED with the specific reason
+- Count of JPG files that have no matching JSON
+- Count of JSON files that have no matching JPG

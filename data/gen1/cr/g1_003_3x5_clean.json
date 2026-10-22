@@ -1,0 +1,16 @@
+{
+  "image_id": "g1_003",
+  "file_path": "data/gen1/cr/g1_003_3x5_clean.jpg",
+  "source": "synthetic",
+  "generation": 1,
+  "parent_id": "real_001",
+  "component_type": "CR",
+  "grid_rows": 3,
+  "grid_cols": 5,
+  "total_defects": 0,
+  "positions": [],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": "clean base, no defects"
+}

@@ -1,0 +1,32 @@
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+csv_path = os.path.join(project_root, "data", "nozzle_detection_tracker.csv")
+
+header = "image_id,file_path,source,gen,parent,rows,cols,total_defects,defects,defects_present,reviewed,finalized,split,notes"
+
+rows = [
+    "g1_001,data/gen1/cr/g1_001_2x5_clean.jpg,synthetic,1,real_001,2,5,0,clean,F,T,T,,clean base",
+    "g1_002,data/gen1/cr/g1_002_3x9_clean.jpg,synthetic,1,real_001,3,9,0,clean,F,T,T,,clean base",
+    "g1_003,data/gen1/cr/g1_003_3x5_clean.jpg,synthetic,1,real_001,3,5,0,clean,F,T,T,,clean base",
+    "g1_004,data/gen1/cr/g1_004_4x3_clean.jpg,synthetic,1,real_001,4,3,0,clean,F,T,T,,clean base",
+    "g1_005,data/gen1/cr/g1_005_4x5_clean.jpg,synthetic,1,real_001,4,5,0,clean,F,T,T,,clean base",
+    "g1_006,data/gen1/cr/g1_006_4x8_clean.jpg,synthetic,1,real_001,4,8,0,clean,F,T,T,,clean base",
+    "g1_007,data/gen1/cr/g1_007_5x3_clean.jpg,synthetic,1,real_001,5,3,0,clean,F,T,T,,clean base",
+    "g1_008,data/gen1/cr/g1_008_5x4_clean.jpg,synthetic,1,real_001,5,4,0,clean,F,T,T,,clean base",
+    "g1_009,data/gen1/cr/g1_009_5x7_clean.jpg,synthetic,1,real_001,5,7,0,clean,F,T,T,,clean base",
+    "g1_010,data/gen1/cr/g1_010_5x10_clean.jpg,synthetic,1,real_001,5,10,0,clean,F,T,T,,clean base",
+    "g1_011,data/gen1/cr/g1_011_7x4_clean.jpg,synthetic,1,real_001,7,4,0,clean,F,T,T,,clean base",
+    "g1_012,data/gen1/cr/g1_012_7x10_clean.jpg,synthetic,1,real_001,7,10,0,clean,F,T,T,,clean base",
+    "g1_013,data/gen1/cr/g1_013_10x5_clean.jpg,synthetic,1,real_001,10,5,0,clean,F,T,T,,clean base",
+    "g1_014,data/gen1/cr/g1_014_10x7_clean.jpg,synthetic,1,real_001,10,7,0,clean,F,T,T,,clean base",
+    "g1_015,data/gen1/cr/g1_015_10x9_clean.jpg,synthetic,1,real_001,10,9,0,clean,F,T,T,,clean base",
+]
+
+with open(csv_path, "w") as f:
+    f.write(header + "\n")
+    for row in rows:
+        f.write(row + "\n")
+
+print(f"Created CSV with {len(rows)} rows at {csv_path}")
