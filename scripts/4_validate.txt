@@ -1,0 +1,30 @@
+Validate all files in data/gen2/cr/. For every .json file:
+
+1. Check that a matching .jpg file exists with the same name
+2. Check that image_id matches the filename prefix (e.g. g2_001)
+3. Check that file_path points to the correct relative path
+4. Check that grid_rows and grid_cols match what's in the filename
+5. Check that generation matches the prefix number (g2 -> 2)
+6. Check that component_type is "CR"
+7. Check that total_defects equals the number of entries in positions
+8. Check that each position has row, col, and state fields
+9. Check that state is either "missing_full" or "bore_defect"
+10. Check that the defect count and type in the filename matches 
+    what's in the JSON (e.g. 3bore means 3 positions all bore_defect,
+    2full means 2 positions all missing_full,
+    3mixed_2full_1bore means 2 missing_full + 1 bore_defect)
+11. Check that position coordinates in filename match the positions 
+    in JSON (e.g. (3r5c,5r1c,8r3c) should match row 3 col 5, 
+    row 5 col 1, row 8 col 3)
+12. Check all required fields exist: image_id, file_path, source, 
+    generation, parent_id, component_type, grid_rows, grid_cols, 
+    total_defects, positions, verified, split, prompt, notes
+13. Count of JPG files with no matching JSON
+14. Count of JSON files with no matching JPG
+
+Print a summary:
+- List of files that PASSED all checks
+- List of files that FAILED with specific reasons
+- Missing file counts
+
+Also run this validation on data/gen1/cr/ with the same checks.
