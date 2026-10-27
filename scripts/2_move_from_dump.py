@@ -10,7 +10,8 @@ Workflow:
 4. Prints a summary of files backed up, moved, deleted, and backup location.
 
 Usage:
-    python move_from_dump.py <generation: g1|g2|g3|...> <component: cr|dsla>
+    python 2_move_from_dump.py <generation: g1|g2|g3|...> <component: cr|dsla>
+    python 2_move_from_dump.py <target_folder_path>
 """
 
 import re
@@ -21,32 +22,44 @@ from pathlib import Path
 
 
 def main() -> None:
-    if len(sys.argv) != 3:
-        print("Usage: python move_from_dump.py <generation: g1|g2|g3|...> <component: cr|dsla>")
+    # Resolve paths relative to project root (parent of scripts/) so it works from anywhere
+    project_root = Path(__file__).resolve().parent.parent
+
+    if len(sys.argv) == 2:
+        # e.g. python 2_move_from_dump.py data/gen2/cr
+        folder_path = Path(sys.argv[1].strip())
+        target_folder = folder_path if folder_path.is_absolute() else (project_root / folder_path)
+        comp_input = target_folder.name.lower()
+        gen_input = target_folder.parent.name.lower()
+    elif len(sys.argv) == 3:
+        # e.g. python 2_move_from_dump.py g2 cr
+        gen_input = sys.argv[1].strip()
+        comp_input = sys.argv[2].strip().lower()
+
+        gen_lower = gen_input.lower()
+        if gen_lower.startswith("gen"):
+            gen_folder = gen_lower
+        elif gen_lower.startswith("g"):
+            gen_folder = f"gen{gen_lower[1:]}"
+        else:
+            gen_folder = f"gen{gen_lower}"
+
+        target_folder = project_root / "data" / gen_folder / comp_input
+    else:
+        print("Usage: python 2_move_from_dump.py <generation: g1|g2|g3|...> <component: cr|dsla>")
+        print("   or: python 2_move_from_dump.py <target_folder_path>")
         sys.exit(1)
 
-    gen_input = sys.argv[1].strip()
-    comp_input = sys.argv[2].strip().lower()
-
-    # Parse generation prefix and folder (e.g. g2 -> folder: gen2, prefix: g2)
+    # Parse generation prefix (e.g. "g2")
     gen_lower = gen_input.lower()
     if gen_lower.startswith("gen"):
-        gen_num = gen_lower[3:]
-        gen_prefix = f"g{gen_num}"
-        gen_folder = f"gen{gen_num}"
+        gen_prefix = f"g{gen_lower[3:]}"
     elif gen_lower.startswith("g"):
-        gen_num = gen_lower[1:]
         gen_prefix = gen_lower
-        gen_folder = f"gen{gen_num}"
     else:
         gen_prefix = f"g{gen_lower}"
-        gen_folder = f"gen{gen_lower}"
 
-    # Resolve paths relative to script location so it works from anywhere
-    script_dir = Path(__file__).resolve().parent
-    project_root = script_dir.parent
     dump_dir = project_root / "dump"
-    target_dir = project_root / "data" / gen_folder / comp_input
 
     if not dump_dir.exists():
         print(f"Dump folder does not exist at: {dump_dir}")
@@ -74,12 +87,12 @@ def main() -> None:
     print(f"Backup created successfully: {backed_up_count} file(s) backed up.\n")
 
     # Ensure target directory exists
-    target_dir.mkdir(parents=True, exist_ok=True)
+    target_folder.mkdir(parents=True, exist_ok=True)
 
     # Determine the next sequential number based on existing files with same prefix
     pattern = re.compile(rf"^{re.escape(gen_prefix)}_(\d+)", re.IGNORECASE)
     existing_numbers = []
-    for f in target_dir.iterdir():
+    for f in target_folder.iterdir():
         match = pattern.match(f.name)
         if match:
             existing_numbers.append(int(match.group(1)))
@@ -90,7 +103,7 @@ def main() -> None:
     moved_files = []
     for file in jpg_files:
         new_filename = f"{gen_prefix}_{next_seq:03d}_{file.name}"
-        dest_path = target_dir / new_filename
+        dest_path = target_folder / new_filename
 
         shutil.copy2(file, dest_path)
 
@@ -109,8 +122,14 @@ def main() -> None:
             file.unlink()
             deleted_count += 1
 
+    try:
+        rel_target = target_folder.relative_to(project_root)
+    except ValueError:
+        rel_target = target_folder
+
     # 4. Print summary at the end
     print("\n--- Summary ---")
+    print(f"- Target folder:           {rel_target}")
     print(f"- Files backed up:         {backed_up_count}")
     print(f"- Files moved:             {moved_count}")
     print(f"- Files deleted from dump: {deleted_count}")

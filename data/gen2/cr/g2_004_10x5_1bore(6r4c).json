@@ -1,0 +1,22 @@
+{
+  "image_id": "g2_004",
+  "file_path": "data/gen2/cr/g2_004_10x5_1bore(6r4c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 1,
+  "positions": [
+    {
+      "row": 6,
+      "col": 4,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

@@ -1,0 +1,37 @@
+{
+  "image_id": "g2_022",
+  "file_path": "data/gen2/cr/g2_022_10x5_4bore(1r3c, 4r1c, 5r5c, 9r2c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 4,
+  "positions": [
+    {
+      "row": 1,
+      "col": 3,
+      "state": "bore_defect"
+    },
+    {
+      "row": 4,
+      "col": 1,
+      "state": "bore_defect"
+    },
+    {
+      "row": 5,
+      "col": 5,
+      "state": "bore_defect"
+    },
+    {
+      "row": 9,
+      "col": 2,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

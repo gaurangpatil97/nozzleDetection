@@ -1,0 +1,32 @@
+{
+  "image_id": "g2_019",
+  "file_path": "data/gen2/cr/g2_019_10x5_3full(2r2c, 6r4c, 10r1c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 3,
+  "positions": [
+    {
+      "row": 2,
+      "col": 2,
+      "state": "missing_full"
+    },
+    {
+      "row": 6,
+      "col": 4,
+      "state": "missing_full"
+    },
+    {
+      "row": 10,
+      "col": 1,
+      "state": "missing_full"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

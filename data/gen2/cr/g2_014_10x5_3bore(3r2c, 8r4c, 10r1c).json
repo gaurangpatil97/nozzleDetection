@@ -1,0 +1,32 @@
+{
+  "image_id": "g2_014",
+  "file_path": "data/gen2/cr/g2_014_10x5_3bore(3r2c, 8r4c, 10r1c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 3,
+  "positions": [
+    {
+      "row": 3,
+      "col": 2,
+      "state": "bore_defect"
+    },
+    {
+      "row": 8,
+      "col": 4,
+      "state": "bore_defect"
+    },
+    {
+      "row": 10,
+      "col": 1,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

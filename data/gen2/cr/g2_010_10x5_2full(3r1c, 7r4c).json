@@ -1,0 +1,27 @@
+{
+  "image_id": "g2_010",
+  "file_path": "data/gen2/cr/g2_010_10x5_2full(3r1c, 7r4c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 2,
+  "positions": [
+    {
+      "row": 3,
+      "col": 1,
+      "state": "missing_full"
+    },
+    {
+      "row": 7,
+      "col": 4,
+      "state": "missing_full"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}
