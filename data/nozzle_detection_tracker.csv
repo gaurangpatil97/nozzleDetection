@@ -1,16 +1,42 @@
-image_id,file_path,source,gen,parent,rows,cols,total_defects,defects,defects_present,reviewed,finalized,split,notes
-g1_001,data/gen1/cr/g1_001_2x5_clean.jpg,synthetic,1,real_001,2,5,0,clean,F,T,T,,clean base
-g1_002,data/gen1/cr/g1_002_3x9_clean.jpg,synthetic,1,real_001,3,9,0,clean,F,T,T,,clean base
-g1_003,data/gen1/cr/g1_003_3x5_clean.jpg,synthetic,1,real_001,3,5,0,clean,F,T,T,,clean base
-g1_004,data/gen1/cr/g1_004_4x3_clean.jpg,synthetic,1,real_001,4,3,0,clean,F,T,T,,clean base
-g1_005,data/gen1/cr/g1_005_4x5_clean.jpg,synthetic,1,real_001,4,5,0,clean,F,T,T,,clean base
-g1_006,data/gen1/cr/g1_006_4x8_clean.jpg,synthetic,1,real_001,4,8,0,clean,F,T,T,,clean base
-g1_007,data/gen1/cr/g1_007_5x3_clean.jpg,synthetic,1,real_001,5,3,0,clean,F,T,T,,clean base
-g1_008,data/gen1/cr/g1_008_5x4_clean.jpg,synthetic,1,real_001,5,4,0,clean,F,T,T,,clean base
-g1_009,data/gen1/cr/g1_009_5x7_clean.jpg,synthetic,1,real_001,5,7,0,clean,F,T,T,,clean base
-g1_010,data/gen1/cr/g1_010_5x10_clean.jpg,synthetic,1,real_001,5,10,0,clean,F,T,T,,clean base
-g1_011,data/gen1/cr/g1_011_7x4_clean.jpg,synthetic,1,real_001,7,4,0,clean,F,T,T,,clean base
-g1_012,data/gen1/cr/g1_012_7x10_clean.jpg,synthetic,1,real_001,7,10,0,clean,F,T,T,,clean base
-g1_013,data/gen1/cr/g1_013_10x5_clean.jpg,synthetic,1,real_001,10,5,0,clean,F,T,T,,clean base
-g1_014,data/gen1/cr/g1_014_10x7_clean.jpg,synthetic,1,real_001,10,7,0,clean,F,T,T,,clean base
-g1_015,data/gen1/cr/g1_015_10x9_clean.jpg,synthetic,1,real_001,10,9,0,clean,F,T,T,,clean base
+image_id,file_path,source,gen,parent,component,rows,cols,total_defects,defects,defects_present,reviewed,finalized,split,notes
+g1_001,data/gen1/cr/g1_001_2x5_clean.jpg,synthetic,1,real_001,CR,2,5,0,clean,F,F,F,,"clean base, no defects"
+g1_002,data/gen1/cr/g1_002_3x9_clean.jpg,synthetic,1,real_001,CR,3,9,0,clean,F,F,F,,"clean base, no defects"
+g1_003,data/gen1/cr/g1_003_3x5_clean.jpg,synthetic,1,real_001,CR,3,5,0,clean,F,F,F,,"clean base, no defects"
+g1_004,data/gen1/cr/g1_004_4x3_clean.jpg,synthetic,1,real_001,CR,4,3,0,clean,F,F,F,,"clean base, no defects"
+g1_005,data/gen1/cr/g1_005_4x5_clean.jpg,synthetic,1,real_001,CR,4,5,0,clean,F,F,F,,"clean base, no defects"
+g1_006,data/gen1/cr/g1_006_4x8_clean.jpg,synthetic,1,real_001,CR,4,8,0,clean,F,F,F,,"clean base, no defects"
+g1_007,data/gen1/cr/g1_007_5x3_clean.jpg,synthetic,1,real_001,CR,5,3,0,clean,F,F,F,,"clean base, no defects"
+g1_008,data/gen1/cr/g1_008_5x4_clean.jpg,synthetic,1,real_001,CR,5,4,0,clean,F,F,F,,"clean base, no defects"
+g1_009,data/gen1/cr/g1_009_5x7_clean.jpg,synthetic,1,real_001,CR,5,7,0,clean,F,F,F,,"clean base, no defects"
+g1_010,data/gen1/cr/g1_010_5x10_clean.jpg,synthetic,1,real_001,CR,5,10,0,clean,F,F,F,,"clean base, no defects"
+g1_011,data/gen1/cr/g1_011_7x4_clean.jpg,synthetic,1,real_001,CR,7,4,0,clean,F,F,F,,"clean base, no defects"
+g1_012,data/gen1/cr/g1_012_7x10_clean.jpg,synthetic,1,real_001,CR,7,10,0,clean,F,F,F,,"clean base, no defects"
+g1_013,data/gen1/cr/g1_013_10x5_clean.jpg,synthetic,1,real_001,CR,10,5,0,clean,F,F,F,,"clean base, no defects"
+g1_014,data/gen1/cr/g1_014_10x7_clean.jpg,synthetic,1,real_001,CR,10,7,0,clean,F,F,F,,"clean base, no defects"
+g1_015,data/gen1/cr/g1_015_10x9_clean.jpg,synthetic,1,real_001,CR,10,9,0,clean,F,F,F,,"clean base, no defects"
+g2_001,data/gen2/cr/g2_001_10x5_1bore(10r5c).jpg,synthetic,2,-,CR,10,5,1,r10c5:bore,T,F,F,,
+g2_002,data/gen2/cr/g2_002_10x5_1bore(1r1c).jpg,synthetic,2,-,CR,10,5,1,r1c1:bore,T,F,F,,
+g2_003,data/gen2/cr/g2_003_10x5_1bore(4r3c).jpg,synthetic,2,-,CR,10,5,1,r4c3:bore,T,F,F,,
+g2_004,data/gen2/cr/g2_004_10x5_1bore(6r4c).jpg,synthetic,2,-,CR,10,5,1,r6c4:bore,T,F,F,,
+g2_005,data/gen2/cr/g2_005_10x5_1bore(7r1c).jpg,synthetic,2,-,CR,10,5,1,r7c1:bore,T,F,F,,
+g2_006,data/gen2/cr/g2_006_10x5_1full(4r3c).jpg,synthetic,2,-,CR,10,5,1,r4c3:full,T,F,F,,
+g2_007,data/gen2/cr/g2_007_10x5_1full(5r2c).jpg,synthetic,2,-,CR,10,5,1,r5c2:full,T,F,F,,
+g2_008,data/gen2/cr/g2_008_10x5_1full(9r1c).jpg,synthetic,2,-,CR,10,5,1,r9c1:full,T,F,F,,
+g2_009,"data/gen2/cr/g2_009_10x5_2bore(6r4c, 10r1c).jpg",synthetic,2,-,CR,10,5,2,r6c4:bore r10c1:bore,T,F,F,,
+g2_010,"data/gen2/cr/g2_010_10x5_2full(3r1c, 7r4c).jpg",synthetic,2,-,CR,10,5,2,r3c1:full r7c4:full,T,F,F,,
+g2_011,"data/gen2/cr/g2_011_10x5_2full(4r3c, 4r4c).jpg",synthetic,2,-,CR,10,5,2,r4c3:full r4c4:full,T,F,F,,
+g2_012,"data/gen2/cr/g2_012_10x5_3bore(1r5c, 7r1c, 8r4c).jpg",synthetic,2,-,CR,10,5,3,r1c5:bore r7c1:bore r8c4:bore,T,F,F,,
+g2_013,"data/gen2/cr/g2_013_10x5_3bore(3r2c, 7r1c, 8r4c).jpg",synthetic,2,-,CR,10,5,3,r3c2:bore r7c1:bore r8c4:bore,T,F,F,,
+g2_014,"data/gen2/cr/g2_014_10x5_3bore(3r2c, 8r4c, 10r1c).jpg",synthetic,2,-,CR,10,5,3,r3c2:bore r8c4:bore r10c1:bore,T,F,F,,
+g2_015,"data/gen2/cr/g2_015_10x5_3bore(3r5c,5r1c,8r3c).jpg",synthetic,2,-,CR,10,5,3,r3c5:bore r5c1:bore r8c3:bore,T,F,F,,
+g2_016,"data/gen2/cr/g2_016_10x5_3bore(4r5c, 7r1c, 8r4c).jpg",synthetic,2,-,CR,10,5,3,r4c5:bore r7c1:bore r8c4:bore,T,F,F,,
+g2_017,"data/gen2/cr/g2_017_10x5_3full(1r3c, 4r5c, 10r4c).jpg",synthetic,2,-,CR,10,5,3,r1c3:full r4c5:full r10c4:full,T,F,F,,
+g2_018,"data/gen2/cr/g2_018_10x5_3full(1r4c, 5r2c, 9r3c).jpg",synthetic,2,-,CR,10,5,3,r1c4:full r5c2:full r9c3:full,T,F,F,,
+g2_019,"data/gen2/cr/g2_019_10x5_3full(2r2c, 6r4c, 10r1c).jpg",synthetic,2,-,CR,10,5,3,r2c2:full r6c4:full r10c1:full,T,F,F,,
+g2_020,"data/gen2/cr/g2_020_10x5_3full(4r3c, 9r2c, 10r2c).jpg",synthetic,2,-,CR,10,5,3,r4c3:full r9c2:full r10c2:full,T,F,F,,
+g2_021,"data/gen2/cr/g2_021_10x5_3mixed_2full(2r3c, 3r3c)_1bore(5r2c).jpg",synthetic,2,-,CR,10,5,3,r2c3:full r3c3:full r5c2:bore,T,F,F,,
+g2_022,"data/gen2/cr/g2_022_10x5_4bore(1r3c, 4r1c, 5r5c, 9r2c).jpg",synthetic,2,-,CR,10,5,4,r1c3:bore r4c1:bore r5c5:bore r9c2:bore,T,F,F,,
+g2_023,"data/gen2/cr/g2_023_10x5_4bore(2r1c, 6r3c, 7r1c, 9r5c).jpg",synthetic,2,-,CR,10,5,4,r2c1:bore r6c3:bore r7c1:bore r9c5:bore,T,F,F,,
+g2_024,"data/gen2/cr/g2_024_10x5_4bore(2r4c, 3r4c, 8r4c, 9r1c).jpg",synthetic,2,-,CR,10,5,4,r2c4:bore r3c4:bore r8c4:bore r9c1:bore,T,F,F,,
+g2_025,"data/gen2/cr/g2_025_10x5_4mixed_2full(2r3c, 3r3c)_2bore(5r2c, 8r4c).jpg",synthetic,2,-,CR,10,5,4,r2c3:full r3c3:full r5c2:bore r8c4:bore,T,F,F,,
+g2_026,"data/gen2/cr/g2_026_10x8_2full(4r4c, 4r5c).jpg",synthetic,2,-,CR,10,8,2,r4c4:full r4c5:full,T,F,F,,
