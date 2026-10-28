@@ -1,0 +1,27 @@
+{
+  "image_id": "g2_042",
+  "file_path": "data/gen2/cr/g2_042_7x4_2bore(2r2c, 4r3c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 7,
+  "grid_cols": 4,
+  "total_defects": 2,
+  "positions": [
+    {
+      "row": 2,
+      "col": 2,
+      "state": "bore_defect"
+    },
+    {
+      "row": 4,
+      "col": 3,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

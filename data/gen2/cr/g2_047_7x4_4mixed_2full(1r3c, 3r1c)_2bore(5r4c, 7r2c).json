@@ -1,0 +1,37 @@
+{
+  "image_id": "g2_047",
+  "file_path": "data/gen2/cr/g2_047_7x4_4mixed_2full(1r3c, 3r1c)_2bore(5r4c, 7r2c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 7,
+  "grid_cols": 4,
+  "total_defects": 4,
+  "positions": [
+    {
+      "row": 1,
+      "col": 3,
+      "state": "missing_full"
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "state": "missing_full"
+    },
+    {
+      "row": 5,
+      "col": 4,
+      "state": "bore_defect"
+    },
+    {
+      "row": 7,
+      "col": 2,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

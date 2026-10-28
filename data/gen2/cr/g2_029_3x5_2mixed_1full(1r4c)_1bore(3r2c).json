@@ -1,0 +1,27 @@
+{
+  "image_id": "g2_029",
+  "file_path": "data/gen2/cr/g2_029_3x5_2mixed_1full(1r4c)_1bore(3r2c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 3,
+  "grid_cols": 5,
+  "total_defects": 2,
+  "positions": [
+    {
+      "row": 1,
+      "col": 4,
+      "state": "missing_full"
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

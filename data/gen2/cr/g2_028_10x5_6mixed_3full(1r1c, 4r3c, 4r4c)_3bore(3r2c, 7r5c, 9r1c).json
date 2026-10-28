@@ -1,0 +1,47 @@
+{
+  "image_id": "g2_028",
+  "file_path": "data/gen2/cr/g2_028_10x5_6mixed_3full(1r1c, 4r3c, 4r4c)_3bore(3r2c, 7r5c, 9r1c).jpg",
+  "source": "synthetic",
+  "generation": 2,
+  "parent_id": null,
+  "component_type": "CR",
+  "grid_rows": 10,
+  "grid_cols": 5,
+  "total_defects": 6,
+  "positions": [
+    {
+      "row": 1,
+      "col": 1,
+      "state": "missing_full"
+    },
+    {
+      "row": 4,
+      "col": 3,
+      "state": "missing_full"
+    },
+    {
+      "row": 4,
+      "col": 4,
+      "state": "missing_full"
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "state": "bore_defect"
+    },
+    {
+      "row": 7,
+      "col": 5,
+      "state": "bore_defect"
+    },
+    {
+      "row": 9,
+      "col": 1,
+      "state": "bore_defect"
+    }
+  ],
+  "verified": false,
+  "split": "",
+  "prompt": "",
+  "notes": ""
+}

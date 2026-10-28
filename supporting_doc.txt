@@ -1,0 +1,39 @@
+**Nozzle Detection Pipeline Cheatsheet**
+
+| Step | Script | Command | What it does |
+|---|---|---|---|
+| 1 | `1_convert_to_jpg.py` | `python scripts\1_convert_to_jpg.py` | Converts all non-JPG images in `dump/` to JPG |
+| 2 | `2_move_from_dump.py` | `python scripts\2_move_from_dump.py g2 cr` | Backs up dump to D drive, moves JPGs to `data/gen2/cr/` with g2_ prefix |
+| 3 | `3_create_jsons.py` | `python scripts\3_create_jsons.py data/gen2/cr` | Creates JSONs from filenames for all images without one |
+| 4 | `4_validate.txt` | Give to Antigravity: "Run the prompt in scripts/4_validate.txt" | Validates all JSONs match their images and filenames |
+| 5 | `5_regenerate_csv.py` | `python scripts\5_regenerate_csv.py cr` | Rebuilds CSV tracker from all JSONs in real/gen1/gen2/cr |
+
+**Workflow for new images:**
+```
+Generate images in Gemini
+    ↓
+Save to dump/ folder
+    ↓
+Step 1: python scripts\1_convert_to_jpg.py
+    ↓
+Step 2: python scripts\2_move_from_dump.py g2 cr
+    ↓
+Step 3: python scripts\3_create_jsons.py data/gen2/cr
+    ↓
+Step 4: Ask Antigravity to run 4_validate.txt
+    ↓
+Step 5: python scripts\5_regenerate_csv.py cr
+    ↓
+git add . → git commit → git push
+```
+
+**Flags:**
+
+| Script | Arg 1 | Arg 2 | Example |
+|---|---|---|---|
+| 1 | none | none | `python scripts\1_convert_to_jpg.py` |
+| 2 | generation: g1, g2, g3... | component: cr, dsla | `python scripts\2_move_from_dump.py g2 cr` |
+| 3 | folder path | none | `python scripts\3_create_jsons.py data/gen1/cr` |
+| 5 | component: cr, dsla | none | `python scripts\5_regenerate_csv.py cr` |
+
+**Current count: 41 images (15 clean + 26 defect), all CR, all 10×5 except one 10×8**
